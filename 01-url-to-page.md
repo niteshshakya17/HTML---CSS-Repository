@@ -1,4 +1,4 @@
-# what happen between typing a URL and seeing the page
+# What happen between typing a URL and seeing the page
 
 **Instructions:** Paste the URL of any website you visited and write down your understanding of what happens behind the scenes when a user requests that page.
 
