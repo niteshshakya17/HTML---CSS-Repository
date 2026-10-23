@@ -1,10 +1,9 @@
-02-setup-proof.md
+# Assignment 2 setup proof (VS code, node.JS, live server)
 
-Here are the versions of the tools installed on my system:
-- VS Code Version: 1.143
-- Node.js Version: v24.22.1
-- NPM Version: 11.30.1
-- Live Server Extension: Ritwick Dey
+**Instructions:** Take a screenshot of your terminal showing the successfully installed versions of VS Code, Node.js, and npm.
 
-# Screenshot Proof
-![proof](file:///c%3A/Users/NITESH/Pictures/Screenshots/setup%20proof.png.png)
+---
+
+### Setup Proof Screenshot:
+![My Setup Proof]()<img width="1920" height="1020" alt="setup proof png" src="https://github.com/user-attachments/assets/535eb537-3e46-4e73-9016-3deca1b17fd1" />
+
