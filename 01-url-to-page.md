@@ -1,5 +1,13 @@
- # Assignment 1: How the Web Works
+# Assignment 1: How the Web Works
 
+**Instructions:** Paste the URL of any website you visited and write down your understanding of what happens behind the scenes when a user requests that page.
+
+---
+
+### Website URL Visited:
+[https://google.com](https://google.com)
+
+### My Answer:
 When a user types a URL into a browser, the following steps occur to display the page:
 
 1. **DNS Lookup:** The browser checks cache and contacts a DNS server to convert the URL into an IP address.
