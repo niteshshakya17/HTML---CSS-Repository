@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debugged Page - Nitesh Kumar Shakya</title>
+</head>
+<body>
+
+    <!-- 
+    BUGS FOUND AND FIXED:
+    1. Missing <!DOCTYPE html> and lang attribute.
+    2. Missing <meta charset="UTF-8">.
+    3. <title> was never closed.
+    4. <h1> closed with <h2> - tags must match.
+    5. Unclosed <p> tags fixed.
+    6. Improperly nested <b> and <i> tags corrected.
+    7. <img> had no alt attribute (added description).
+    8. href without quotes and without https:// protocol fixed.
+    9. <ul> never closed; stray <ol> opened instead (corrected to <ul>).
+    10. <li> items closed properly.
+    11. Table cells closed and added <thead>/<th> structure.
+    12. </div> closing tag with no opening <div> fixed.
+    -->
+
+    <h1>My Hobbies</h1>
+    <p>I like <b>cricket</b> and <i>music</i>.</p>
+    
+    <img src="photo.jpg" alt="Nitesh playing cricket" width="200">
+
+    <p><a href="https://google.com">Search</a></p>
+
+    <ul>
+        <li>Reading</li>
+        <li>Coding</li>
+    </ul>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Nitesh</td>
+                <td>17</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>Footer text</p>
+
+</body>
+</html>
