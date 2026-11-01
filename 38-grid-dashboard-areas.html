@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Grid Areas</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e9ecf3;
+        }
+
+        /* Dashboard Layout */
+        .dashboard {
+            display: grid;
+            min-height: 100vh;
+            grid-template-columns: 220px 1fr 1fr 1fr;
+            grid-template-rows: 64px auto 1fr 48px;
+            grid-template-areas:
+                "header header header header"
+                "sidebar stat1 stat2 stat3"
+                "sidebar chart chart activity"
+                "footer footer footer footer";
+            gap: 15px;
+        }
+
+        .dashboard > * {
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        /* Header */
+        .header {
+            grid-area: header;
+            background-color: #1f2a44;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 0;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            grid-area: sidebar;
+            background-color: #2b3a67;
+            color: white;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar li {
+            padding: 12px 0;
+            border-bottom: 1px solid #ffffff30;
+        }
+
+        /* Statistics */
+        .stat1 {
+            grid-area: stat1;
+        }
+
+        .stat2 {
+            grid-area: stat2;
+        }
+
+        .stat3 {
+            grid-area: stat3;
+        }
+
+        .stat strong {
+            display: block;
+            font-size: 30px;
+            color: #2b3a67;
+            margin-top: 8px;
+        }
+
+        /* Chart */
+        .chart {
+            grid-area: chart;
+        }
+
+        .bars {
+            display: flex;
+            align-items: flex-end;
+            gap: 10px;
+            height: 160px;
+            margin-top: 20px;
+        }
+
+        .bars span {
+            flex: 1;
+            background: linear-gradient(#5c7cfa, #3b5bdb);
+            border-radius: 5px 5px 0 0;
+        }
+
+        /* Activity */
+        .activity {
+            grid-area: activity;
+        }
+
+        .activity li {
+            margin: 12px 0 12px 20px;
+        }
+
+        /* Footer */
+        .footer {
+            grid-area: footer;
+            text-align: center;
+            border-radius: 0;
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 800px) {
+            .dashboard {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto;
+                grid-template-areas:
+                    "header header"
+                    "stat1 stat2"
+                    "stat3 stat3"
+                    "chart chart"
+                    "activity activity"
+                    "sidebar sidebar"
+                    "footer footer";
+            }
+
+            .sidebar {
+                border-radius: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- Header -->
+        <header class="header">
+            <strong>Analytics</strong>
+            <span>Hello, Aarav</span>
+        </header>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <ul>
+                <li>📊 Overview</li>
+                <li>👥 Users</li>
+                <li>💰 Sales</li>
+                <li>⚙️ Settings</li>
+            </ul>
+        </aside>
+
+        <!-- Statistics -->
+        <section class="stat stat1">
+            <span>Visitors</span>
+            <strong>12,480</strong>
+        </section>
+
+        <section class="stat stat2">
+            <span>Orders</span>
+            <strong>842</strong>
+        </section>
+
+        <section class="stat stat3">
+            <span>Revenue</span>
+            <strong>₹4.2L</strong>
+        </section>
+
+        <!-- Sales Chart -->
+        <section class="chart">
+            <h2>Weekly Sales</h2>
+
+            <div class="bars">
+                <span style="height: 40%;"></span>
+                <span style="height: 65%;"></span>
+                <span style="height: 50%;"></span>
+                <span style="height: 85%;"></span>
+                <span style="height: 70%;"></span>
+                <span style="height: 95%;"></span>
+                <span style="height: 60%;"></span>
+            </div>
+        </section>
+
+        <!-- Activity -->
+        <section class="activity">
+            <h2>Activity</h2>
+            <ul>
+                <li>New order #842</li>
+                <li>User signed up</li>
+                <li>Refund processed</li>
+            </ul>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            &copy; 2026 Analytics Inc.
+        </footer>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Section - Position and Z-Index</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 500px;
+            overflow: hidden;
+            color: white;
+        }
+
+        /* Background Image */
+        .hero-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        /* Dark Overlay */
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        /* Navigation */
+        .nav {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            z-index: 3;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        /* Main Text */
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 90%;
+            z-index: 2;
+        }
+
+        .hero-content h1 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #ff6b35;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+        }
+
+        /* Rating Badge */
+        .badge {
+            position: absolute;
+            right: 30px;
+            bottom: 30px;
+            background-color: white;
+            color: black;
+            padding: 15px;
+            border-radius: 10px;
+            z-index: 3;
+        }
+
+        .badge strong {
+            display: block;
+            font-size: 24px;
+        }
+
+        /* Fixed Button */
+        .fab {
+            position: fixed;
+            right: 15px;
+            top: 50%;
+            background-color: white;
+            color: black;
+            padding: 10px;
+            border-radius: 50%;
+            text-decoration: none;
+            z-index: 10;
+        }
+
+        .next {
+            padding: 60px 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="hero">
+
+        <img class="hero-bg"
+             src="https://picsum.photos/id/1036/1600/900"
+             alt="Snowy mountain">
+
+        <nav class="nav">
+            <span class="logo">TravelNest</span>
+
+            <div>
+                <a href="#">Destinations</a>
+                <a href="#">Deals</a>
+                <a href="#">Contact</a>
+            </div>
+        </nav>
+
+        <div class="hero-content">
+            <h1>Find Your Next Adventure</h1>
+
+            <p>
+                Handpicked trips to the world's most beautiful places.
+            </p>
+
+            <a class="btn" href="#next">Start Exploring</a>
+        </div>
+
+        <div class="badge">
+            <strong>4.9★</strong>
+            12,000+ happy travellers
+        </div>
+
+    </header>
+
+    <a class="fab" href="#" aria-label="Back to top">↑</a>
+
+    <section class="next" id="next">
+        <h2>Popular Destinations</h2>
+        <p>Explore beautiful places around the world.</p>
+    </section>
+
+</body>
+</html>

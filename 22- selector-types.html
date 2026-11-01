@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selector Types</title>
+
+    <style>
+        /* 1. Universal Selector */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 2. Element Selector */
+        body {
+            background-color: lightgray;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h1 {
+            color: blue;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        /* 3. Class Selector */
+        .card {
+            background-color: white;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .highlight {
+            background-color: yellow;
+        }
+
+        /* 4. ID Selector */
+        #special {
+            border-left: 5px solid red;
+        }
+
+        /* 5. Grouping Selector */
+        h2, h3 {
+            color: green;
+        }
+
+        /* 6. Descendant Selector */
+        .card a {
+            color: red;
+        }
+
+        /* 7. Child Selector */
+        ul > li {
+            margin-left: 20px;
+        }
+
+        /* 8. Adjacent Sibling Selector */
+        h2 + p {
+            font-weight: bold;
+        }
+
+        /* 9. Attribute Selector */
+        a[target="_blank"] {
+            background-color: yellow;
+        }
+
+        input[type="text"] {
+            padding: 5px;
+        }
+
+        /* 10. Pseudo-classes */
+        a:hover {
+            color: blue;
+        }
+
+        input:focus {
+            background-color: lightblue;
+        }
+
+        li:nth-child(odd) {
+            color: red;
+        }
+
+        /* 11. Pseudo-element */
+        p::first-line {
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Selector Playground</h1>
+
+    <div class="card">
+        <h2>Class and Element Selector</h2>
+
+        <p>This paragraph is styled by the adjacent sibling selector.</p>
+
+        <p>This is a normal paragraph.</p>
+
+        <p>
+            This is a <span class="highlight">highlighted</span> word.
+        </p>
+    </div>
+
+    <div class="card" id="special">
+        <h3>ID Selector</h3>
+
+        <p>This box has a red left border using ID selector.</p>
+    </div>
+
+    <div class="card">
+        <h3>Child and Descendant Selector</h3>
+
+        <ul>
+            <li>First item</li>
+            <li>Second item</li>
+            <li>
+                Third item with
+                <a href="https://developer.mozilla.org/" target="_blank">
+                    MDN Link
+                </a>
+            </li>
+        </ul>
+
+        <p>
+            <input type="text" placeholder="Enter your name">
+        </p>
+    </div>
+
+</body>
+</html>

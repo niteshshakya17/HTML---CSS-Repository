@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Variants</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eceff4;
+            margin: 0;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .card {
+            width: 260px;
+            padding: 20px;
+        }
+
+        .card h2 {
+            margin-top: 0;
+        }
+
+        .card a {
+            display: inline-block;
+            padding: 8px 15px;
+            margin-top: 10px;
+            text-decoration: none;
+        }
+
+        /* Soft Card */
+        .soft {
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 5px 10px gray;
+        }
+
+        .soft a {
+            background-color: blue;
+            color: white;
+            border-radius: 20px;
+        }
+
+        /* Gradient Card */
+        .gradient {
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            border-radius: 0 40px 0 40px;
+            color: #4a1c24;
+        }
+
+        .gradient a {
+            background-color: #4a1c24;
+            color: white;
+            border-radius: 8px;
+        }
+
+        /* Outline Card */
+        .outline {
+            background-color: #1b1b2f;
+            color: white;
+            border: 2px solid #00e5ff;
+            border-radius: 6px;
+        }
+
+        .outline a {
+            border: 2px solid #00e5ff;
+            color: #00e5ff;
+            border-radius: 4px;
+        }
+
+        .outline a:hover {
+            background-color: #00e5ff;
+            color: #1b1b2f;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Card Variants</h1>
+
+    <div class="cards">
+
+        <div class="card soft">
+            <h2>Soft</h2>
+            <p>White background, rounded corners and a shadow.</p>
+            <a href="#">Read more</a>
+        </div>
+
+        <div class="card gradient">
+            <h2>Gradient</h2>
+            <p>Gradient background with two rounded corners.</p>
+            <a href="#">Read more</a>
+        </div>
+
+        <div class="card outline">
+            <h2>Outline</h2>
+            <p>Dark background with a bright border.</p>
+            <a href="#">Read more</a>
+        </div>
+
+    </div>
+
+</body>
+</html>

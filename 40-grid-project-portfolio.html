@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio - Grid Project</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            background-color: #fdfbf7;
+            color: #1a1a2e;
+            line-height: 1.6;
+        }
+
+        /* Main Grid Layout */
+        .layout {
+            display: grid;
+            max-width: 1200px;
+            margin: auto;
+            padding: 25px;
+            gap: 20px;
+
+            grid-template-columns: repeat(12, 1fr);
+
+            grid-template-areas:
+                "head head head head head head head head head head head head"
+                "hero hero hero hero hero hero hero about about about about about"
+                "p1 p1 p1 p2 p2 p2 p3 p3 p3 p4 p4 p4"
+                "skills skills skills skills skills skills contact contact contact contact contact contact"
+                "foot foot foot foot foot foot foot foot foot foot foot foot";
+        }
+
+        /* Header */
+        .head {
+            grid-area: head;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px double #1a1a2e;
+            padding-bottom: 15px;
+        }
+
+        .head h1 {
+            font-size: 30px;
+        }
+
+        .head nav a {
+            margin-left: 15px;
+            color: #1a1a2e;
+            text-decoration: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            grid-area: hero;
+            position: relative;
+            min-height: 320px;
+            overflow: hidden;
+            border-radius: 6px;
+        }
+
+        .hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+        }
+
+        .hero h2 {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+            font-size: 30px;
+            text-shadow: 0 2px 8px black;
+        }
+
+        /* About Section */
+        .about {
+            grid-area: about;
+            background-color: #1a1a2e;
+            color: white;
+            padding: 25px;
+            border-radius: 6px;
+        }
+
+        .about h2,
+        .project h3 {
+            color: #e94560;
+        }
+
+        /* Project Cards */
+        .p1 {
+            grid-area: p1;
+        }
+
+        .p2 {
+            grid-area: p2;
+        }
+
+        .p3 {
+            grid-area: p3;
+        }
+
+        .p4 {
+            grid-area: p4;
+        }
+
+        .project {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 18px;
+            border-radius: 6px;
+        }
+
+        /* Skills Section */
+        .skills {
+            grid-area: skills;
+        }
+
+        .skills ul {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        .skills li {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+            border-radius: 4px;
+        }
+
+        /* Contact Section */
+        .contact {
+            grid-area: contact;
+            background-color: #fff0f3;
+            padding: 25px;
+            border-radius: 6px;
+        }
+
+        /* Footer */
+        .foot {
+            grid-area: foot;
+            text-align: center;
+            border-top: 1px solid #ccc;
+            padding-top: 15px;
+            font-size: 14px;
+        }
+
+        /* Tablet Screen */
+        @media (max-width: 900px) {
+            .layout {
+                grid-template-columns: repeat(2, 1fr);
+
+                grid-template-areas:
+                    "head head"
+                    "hero hero"
+                    "about about"
+                    "p1 p2"
+                    "p3 p4"
+                    "skills skills"
+                    "contact contact"
+                    "foot foot";
+            }
+        }
+
+        /* Mobile Screen */
+        @media (max-width: 520px) {
+            .layout {
+                grid-template-columns: 1fr;
+
+                grid-template-areas:
+                    "head"
+                    "hero"
+                    "about"
+                    "p1"
+                    "p2"
+                    "p3"
+                    "p4"
+                    "skills"
+                    "contact"
+                    "foot";
+            }
+
+            .head {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .head nav a {
+                margin: 5px;
+            }
+
+            .hero h2 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="layout">
+
+        <!-- Header -->
+        <header class="head">
+            <h1>Nitesh Kumar Shakya</h1>
+
+            <nav>
+                <a href="#">Work</a>
+                <a href="#">Skills</a>
+                <a href="#">Contact</a>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <img src="https://picsum.photos/id/1040/1000/600"
+                 alt="Old castle on a hill above a river">
+
+            <h2>Building the web, one grid at a time.</h2>
+        </section>
+
+        <!-- About Section -->
+        <section class="about">
+            <h2>About</h2>
+
+            <p>
+                I am a BCA AI student at Invertis University.
+                I am interested in web development, HTML,
+                CSS and learning new computer skills.
+                This page is created using CSS Grid.
+            </p>
+        </section>
+
+        <!-- Project Cards -->
+        <article class="project p1">
+            <h3>Resume Site</h3>
+            <p>HTML page with a simple and clean design.</p>
+        </article>
+
+        <article class="project p2">
+            <h3>Login UI</h3>
+            <p>A login form created using Flexbox.</p>
+        </article>
+
+        <article class="project p3">
+            <h3>Gallery</h3>
+            <p>Photo gallery created using CSS Grid.</p>
+        </article>
+
+        <article class="project p4">
+            <h3>Dashboard</h3>
+            <p>Dashboard layout using named grid areas.</p>
+        </article>
+
+        <!-- Skills Section -->
+        <section class="skills">
+            <h2>Skills</h2>
+
+            <ul>
+                <li>HTML5</li>
+                <li>CSS Grid</li>
+                <li>Flexbox</li>
+                <li>Git</li>
+                <li>Responsive Design</li>
+                <li>GitHub</li>
+            </ul>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact">
+            <h2>Contact</h2>
+
+            <p>📧 niteshkumarshakya15@gmail.com</p>
+            <p>📍 Meerut, India</p>
+        </section>
+
+        <!-- Footer -->
+        <footer class="foot">
+            &copy; 2026 Nitesh Kumar Shakya
+        </footer>
+
+    </div>
+
+</body>
+</html>

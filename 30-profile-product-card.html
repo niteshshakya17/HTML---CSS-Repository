@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card and Product Card</title>
+
+    <style>
+        :root {
+            --primary: #5b4bdb;
+            --radius: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background-color: #eef0f8;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 40px 15px;
+        }
+
+        /* Profile Card */
+
+        .profile {
+            width: 300px;
+            background-color: white;
+            border-radius: var(--radius);
+            box-shadow: 0 10px 20px gray;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .cover {
+            height: 100px;
+            background: linear-gradient(120deg, var(--primary), #00b4d8);
+        }
+
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 5px solid white;
+            margin-top: -50px;
+            object-fit: cover;
+        }
+
+        .profile-body {
+            padding: 0 20px 20px;
+        }
+
+        .profile h2 {
+            margin-top: 10px;
+        }
+
+        .profile p {
+            color: #666;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .stats strong {
+            display: block;
+            font-size: 20px;
+        }
+
+        .stats span {
+            font-size: 12px;
+            color: #888;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #3f31b0;
+        }
+
+        /* Product Card */
+
+        .product {
+            width: 300px;
+            background-color: white;
+            border-radius: var(--radius);
+            box-shadow: 0 10px 20px gray;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .product:hover {
+            transform: translateY(-5px);
+        }
+
+        .product img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .tag {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background-color: red;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+        }
+
+        .product-body {
+            padding: 20px;
+        }
+
+        .product h2 {
+            font-size: 20px;
+        }
+
+        .rating {
+            color: orange;
+        }
+
+        .price {
+            margin: 15px 0;
+        }
+
+        .price strong {
+            font-size: 24px;
+        }
+
+        .price s {
+            color: gray;
+            margin-left: 8px;
+        }
+
+        .product .btn {
+            display: block;
+            text-align: center;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Profile Card -->
+
+    <article class="profile">
+
+        <div class="cover"></div>
+
+        <img class="avatar"
+             src="https://picsum.photos/id/1005/200/200"
+             alt="Profile Photo">
+
+        <div class="profile-body">
+
+            <h2>Nitesh Kumar Shakya</h2>
+            <p>BCA AI Student · Invertis University</p>
+
+            <div class="stats">
+                <div>
+                    <strong>45</strong>
+                    <span>Projects</span>
+                </div>
+
+                <div>
+                    <strong>1.2k</strong>
+                    <span>Followers</span>
+                </div>
+
+                <div>
+                    <strong>320</strong>
+                    <span>Commits</span>
+                </div>
+            </div>
+
+            <a class="btn" href="#">Follow</a>
+
+        </div>
+    </article>
+
+
+    <!-- Product Card -->
+
+    <article class="product">
+
+        <span class="tag">-30%</span>
+
+        <img src="https://picsum.photos/id/21/600/400"
+             alt="Wireless Headphones">
+
+        <div class="product-body">
+
+            <h2>Wireless Headphones</h2>
+
+            <div class="rating">
+                ★★★★☆ <small>(214)</small>
+            </div>
+
+            <div class="price">
+                <strong>₹2,799</strong>
+                <s>₹3,999</s>
+            </div>
+
+            <a class="btn" href="#">Add to Cart</a>
+
+        </div>
+    </article>
+
+</body>
+</html>

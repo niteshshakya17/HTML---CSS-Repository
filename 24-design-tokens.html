@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Tokens</title>
+
+    <style>
+        /* Design Tokens */
+        :root {
+            /* Colours */
+            --primary: blue;
+            --dark-blue: darkblue;
+            --accent: coral;
+            --background: #f5f7ff;
+            --surface: white;
+            --text: #222222;
+
+            /* Font Sizes */
+            --small: 12px;
+            --normal: 16px;
+            --medium: 20px;
+            --large: 25px;
+
+            /* Spacing */
+            --space-small: 5px;
+            --space-medium: 15px;
+            --space-large: 25px;
+
+            /* Other Styles */
+            --radius: 10px;
+            --shadow: 0 4px 10px gray;
+        }
+
+        /* Dark Theme */
+        [data-theme="dark"] {
+            --background: #222222;
+            --surface: #333333;
+            --text: white;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--text);
+            font-family: Arial, sans-serif;
+            padding: var(--space-large);
+        }
+
+        h1 {
+            font-size: var(--large);
+        }
+
+        h2 {
+            font-size: var(--medium);
+        }
+
+        .card {
+            background-color: var(--surface);
+            padding: var(--space-large);
+            margin-top: var(--space-large);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        button {
+            background-color: var(--primary);
+            color: white;
+            padding: var(--space-small) var(--space-medium);
+            border: none;
+            border-radius: var(--radius);
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: var(--dark-blue);
+        }
+
+        .accent {
+            background-color: var(--accent);
+        }
+
+        .swatches {
+            display: flex;
+            gap: var(--space-medium);
+            flex-wrap: wrap;
+        }
+
+        .swatch {
+            padding: var(--space-medium);
+            color: white;
+            border-radius: var(--radius);
+        }
+
+        .primary {
+            background-color: var(--primary);
+        }
+
+        .dark {
+            background-color: var(--dark-blue);
+        }
+
+        .coral {
+            background-color: var(--accent);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Design Token Sheet</h1>
+
+    <button onclick="document.documentElement.dataset.theme =
+    document.documentElement.dataset.theme === 'dark' ? '' : 'dark'">
+        Toggle Dark Theme
+    </button>
+
+    <div class="card">
+        <h2>Colours</h2>
+
+        <div class="swatches">
+            <div class="swatch primary">Primary</div>
+            <div class="swatch dark">Dark Blue</div>
+            <div class="swatch coral">Accent</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Font Sizes</h2>
+
+        <p style="font-size: var(--large);">Large Text</p>
+        <p style="font-size: var(--medium);">Medium Text</p>
+        <p style="font-size: var(--normal);">Normal Text</p>
+        <p style="font-size: var(--small);">Small Text</p>
+    </div>
+
+    <div class="card">
+        <h2>Buttons</h2>
+
+        <button>Primary Button</button>
+        <button class="accent">Accent Button</button>
+    </div>
+
+</body>
+</html>

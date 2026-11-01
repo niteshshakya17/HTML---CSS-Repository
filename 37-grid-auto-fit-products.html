@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto-Fit Product Grid</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f6fa;
+            padding: 30px 15px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .note {
+            text-align: center;
+            color: #666;
+        }
+
+        /* Auto-Fit Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 25px auto;
+        }
+
+        /* Product Card */
+        .card {
+            background-color: white;
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .card img {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .card h2 {
+            font-size: 18px;
+            margin: 12px 0 5px;
+        }
+
+        .price {
+            color: #0a8754;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Our Products</h1>
+
+    <p class="note">
+        Resize the window to see the product grid adjust automatically.
+    </p>
+
+    <div class="grid">
+
+        <div class="card">
+            <img src="https://picsum.photos/id/1060/400/300" alt="Coffee">
+            <h2>Coffee Beans</h2>
+            <p class="price">₹499</p>
+        </div>
+
+        <div class="card">
+            <img src="https://picsum.photos/id/1080/400/300" alt="Strawberries">
+            <h2>Strawberries</h2>
+            <p class="price">₹199</p>
+        </div>
+
+        <div class="card">
+            <img src="https://picsum.photos/id/292/400/300" alt="Bread">
+            <h2>Sourdough Bread</h2>
+            <p class="price">₹149</p>
+        </div>
+
+        <div class="card">
+            <img src="https://picsum.photos/id/312/400/300" alt="Honey">
+            <h2>Honey Jar</h2>
+            <p class="price">₹329</p>
+        </div>
+
+        <div class="card">
+            <img src="https://picsum.photos/id/429/400/300" alt="Green Tea">
+            <h2>Green Tea</h2>
+            <p class="price">₹259</p>
+        </div>
+
+        <div class="card">
+            <img src="https://picsum.photos/id/493/400/300" alt="Spices">
+            <h2>Spice Box</h2>
+            <p class="price">₹599</p>
+        </div>
+
+        <div class="card">
+            <img src="https://picsum.photos/id/835/400/300" alt="Olive Oil">
+            <h2>Olive Oil</h2>
+            <p class="price">₹749</p>
+        </div>
+
+    </div>
+
+</body>
+</html>

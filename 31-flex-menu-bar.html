@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Menu Bar</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Menu Bar */
+
+        .menu {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #1d3557;
+            padding: 0 20px;
+            flex-wrap: wrap;
+        }
+
+        .brand {
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+            padding: 15px 0;
+        }
+
+        .menu-list {
+            display: flex;
+            list-style: none;
+        }
+
+        .menu-list a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+        }
+
+        .menu-list a:hover,
+        .menu-list a.active {
+            background-color: #457b9d;
+        }
+
+        /* Sign Up Button */
+
+        .signup {
+            background-color: #e63946;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+
+        /* Mobile Screen */
+
+        @media (max-width: 640px) {
+
+            .menu {
+                flex-direction: column;
+                align-items: stretch;
+                padding: 0;
+            }
+
+            .brand {
+                text-align: center;
+            }
+
+            .menu-list {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .signup {
+                margin: 10px;
+                text-align: center;
+            }
+        }
+
+        main {
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="menu">
+
+        <div class="brand">MyBrand</div>
+
+        <ul class="menu-list">
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+        <a class="signup" href="#">Sign Up</a>
+
+    </nav>
+
+    <main>
+        <h1>Responsive Flexbox Menu Bar</h1>
+        <p>Resize the window to see the menu change.</p>
+    </main>
+
+</body>
+</html>

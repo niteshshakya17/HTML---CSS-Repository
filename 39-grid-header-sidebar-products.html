@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store - Header Sidebar Products</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f6f7fb;
+        }
+
+        /* Main Page */
+        .page {
+            display: grid;
+            grid-template-columns: 240px 1fr;
+            grid-template-areas:
+                "header header"
+                "sidebar main"
+                "footer footer";
+            min-height: 100vh;
+        }
+
+        /* Header */
+        header {
+            grid-area: header;
+            background-color: #14213d;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header input {
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            width: 250px;
+        }
+
+        /* Sidebar */
+        aside {
+            grid-area: sidebar;
+            background-color: white;
+            padding: 25px;
+            border-right: 1px solid #ddd;
+        }
+
+        aside h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        aside ul {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        aside li {
+            padding: 6px 0;
+        }
+
+        /* Main Content */
+        main {
+            grid-area: main;
+            padding: 25px;
+        }
+
+        main h1 {
+            margin-bottom: 20px;
+        }
+
+        /* Product Grid */
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .product {
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+        }
+
+        .product img {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .product h3 {
+            font-size: 17px;
+            margin: 10px 0 5px;
+        }
+
+        .product p {
+            color: #0a8754;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            grid-area: footer;
+            background-color: #14213d;
+            color: white;
+            text-align: center;
+            padding: 18px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 720px) {
+            .page {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "header"
+                    "sidebar"
+                    "main"
+                    "footer";
+            }
+
+            aside {
+                border-right: none;
+                border-bottom: 1px solid #ddd;
+            }
+
+            header input {
+                width: 55%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="page">
+
+        <!-- Header -->
+        <header>
+            <strong>ShopGrid</strong>
+            <input type="search" placeholder="Search products"
+                   aria-label="Search products">
+        </header>
+
+        <!-- Sidebar -->
+        <aside>
+            <h2>Categories</h2>
+
+            <ul>
+                <li>Electronics</li>
+                <li>Clothing</li>
+                <li>Home</li>
+                <li>Sports</li>
+            </ul>
+
+            <h2>Price</h2>
+
+            <ul>
+                <li>Under ₹500</li>
+                <li>₹500 – ₹2000</li>
+                <li>Above ₹2000</li>
+            </ul>
+        </aside>
+
+        <!-- Products -->
+        <main>
+            <h1>All Products</h1>
+
+            <div class="products">
+
+                <article class="product">
+                    <img src="https://picsum.photos/id/103/300/300"
+                         alt="Sneakers">
+                    <h3>Sneakers</h3>
+                    <p>₹2,499</p>
+                </article>
+
+                <article class="product">
+                    <img src="https://picsum.photos/id/1070/300/300"
+                         alt="Denim Jeans">
+                    <h3>Denim Jeans</h3>
+                    <p>₹1,299</p>
+                </article>
+
+                <article class="product">
+                    <img src="https://picsum.photos/id/119/300/300"
+                         alt="Backpack">
+                    <h3>Backpack</h3>
+                    <p>₹899</p>
+                </article>
+
+                <article class="product">
+                    <img src="https://picsum.photos/id/160/300/300"
+                         alt="Camera">
+                    <h3>Camera</h3>
+                    <p>₹18,999</p>
+                </article>
+
+                <article class="product">
+                    <img src="https://picsum.photos/id/180/300/300"
+                         alt="Laptop">
+                    <h3>Laptop</h3>
+                    <p>₹54,999</p>
+                </article>
+
+                <article class="product">
+                    <img src="https://picsum.photos/id/225/300/300"
+                         alt="Desk Lamp">
+                    <h3>Desk Lamp</h3>
+                    <p>₹749</p>
+                </article>
+
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            &copy; 2026 ShopGrid
+        </footer>
+
+    </div>
+
+</body>
+</html>

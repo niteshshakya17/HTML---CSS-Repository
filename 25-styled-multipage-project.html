@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My styled multi-page project">
+    <title>My Multi-Page Project</title>
+
+    <style>
+        /* Colour Variables */
+        :root {
+            --primary: #1f3a93;
+            --accent: #f4a261;
+            --bg: #f8f9fc;
+            --text: #222;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        /* Navigation */
+        nav {
+            margin-top: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        /* Main Content */
+        main {
+            width: 90%;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .page {
+            display: none;
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .page:target,
+        body:not(:has(.page:target)) #home {
+            display: block;
+        }
+
+        h2 {
+            color: var(--primary);
+        }
+
+        /* Forms */
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input,
+        select,
+        textarea {
+            display: block;
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid gray;
+        }
+
+        button {
+            background-color: var(--accent);
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: orange;
+        }
+
+        /* Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid gray;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #eef1fb;
+        }
+
+        /* Design Note */
+        .note {
+            background-color: #fff8ec;
+            border-left: 5px solid var(--accent);
+            padding: 15px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 15px;
+            color: gray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Nitesh's Site</h1>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#register">Register</a>
+            <a href="#contact">Contact</a>
+            <a href="#design">Design Note</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Home Page -->
+        <section id="home" class="page">
+            <h2>Home</h2>
+            <p>
+                Welcome to my styled multi-page project.
+                This website is created using HTML and CSS.
+            </p>
+        </section>
+
+        <!-- About Page -->
+        <section id="about" class="page">
+            <h2>About</h2>
+
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <td>Nitesh Kumar Shakya</td>
+                </tr>
+
+                <tr>
+                    <th>City</th>
+                    <td>Meerut</td>
+                </tr>
+
+                <tr>
+                    <th>Course</th>
+                    <td>BCA</td>
+                </tr>
+
+                <tr>
+                    <th>University</th>
+                    <td>Invertis University</td>
+                </tr>
+
+                <tr>
+                    <th>Interests</th>
+                    <td>Learning Web Development</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Registration Page -->
+        <section id="register" class="page">
+            <h2>Registration</h2>
+
+            <form action="#">
+                <label>
+                    Name
+                    <input type="text" required>
+                </label>
+
+                <label>
+                    Email
+                    <input type="email" required>
+                </label>
+
+                <label>
+                    Course
+                    <select>
+                        <option>BCA</option>
+                        <option>B.Tech</option>
+                    </select>
+                </label>
+
+                <button type="submit">Register</button>
+            </form>
+        </section>
+
+        <!-- Contact Page -->
+        <section id="contact" class="page">
+            <h2>Contact</h2>
+
+            <form action="#">
+                <label>
+                    Name
+                    <input type="text">
+                </label>
+
+                <label>
+                    Email
+                    <input type="email">
+                </label>
+
+                <label>
+                    Message
+                    <textarea rows="4"></textarea>
+                </label>
+
+                <button type="submit">Send</button>
+            </form>
+
+            <p>
+                Email:
+                niteshkumarshakya15@gmail.com
+            </p>
+        </section>
+
+        <!-- Design Choices -->
+        <section id="design" class="page">
+            <h2>Design Choices</h2>
+
+            <div class="note">
+
+                <p>
+                    <strong>Colour:</strong>
+                    Blue is used for the header and orange
+                    is used for buttons and highlights.
+                </p>
+
+                <p>
+                    <strong>Typography:</strong>
+                    Arial font is used because it is simple
+                    and easy to read.
+                </p>
+
+                <p>
+                    <strong>Layout:</strong>
+                    The website has a simple layout with
+                    different sections.
+                </p>
+
+                <p>
+                    <strong>Maintainability:</strong>
+                    CSS variables are used to change colours
+                    easily.
+                </p>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <small>&copy; 2026 Nitesh Kumar Shakya</small>
+    </footer>
+
+</body>
+</html>

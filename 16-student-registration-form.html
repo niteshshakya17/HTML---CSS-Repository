@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Student registration form assignment">
+    <title>Student Registration</title>
+</head>
+<body>
+
+    <h1>Student Registration Form</h1>
+    <form action="#" method="post">
+        
+        <!-- Full Name Input -->
+        <p>
+            <label for="name">Full name:</label>
+            <input type="text" id="name" name="name" required placeholder="Nitesh Kumar">
+        </p>
+
+        <!-- Email Input -->
+        <p>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </p>
+
+        <!-- Phone Number Input -->
+        <p>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="10 digits" required>
+        </p>
+
+        <!-- Password Input -->
+        <p>
+            <label for="pass">Password:</label>
+            <input type="password" id="pass" name="password" minlength="8" required>
+        </p>
+
+        <!-- Gender Selection using Fieldset -->
+        <fieldset>
+            <legend>Gender</legend>
+            <label><input type="radio" name="gender" value="male"> Male</label>
+            <label><input type="radio" name="gender" value="female"> Female</label>
+            <label><input type="radio" name="gender" value="other"> Other</label>
+        </fieldset>
+
+        <!-- Course Dropdown Options -->
+        <p>
+            <label for="course">Course:</label>
+            <select id="course" name="course" required>
+                <option value="">-- Select --</option>
+                <option value="btech_cse">B.Tech CSE</option>
+                <option value="bca_ai">BCA in Artificial Intelligence</option>
+                <option value="bsc_it">B.Sc IT</option>
+            </select>
+        </p>
+
+        <!-- Terms and Conditions Checkbox -->
+        <p>
+            <label><input type="checkbox" name="terms" required> I agree to the terms and conditions</label>
+        </p>
+
+        <!-- Form Actions -->
+        <button type="submit">Register</button>
+        <button type="reset">Clear</button>
+
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Responsive website with three breakpoints.">
+
+    <title>Breakpoints Project</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background: #f8f9fc;
+            color: #222;
+        }
+
+        header {
+            background: #1f3a93;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 2rem;
+        }
+
+        h1 {
+            font-size: 2.6rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px #00000015;
+        }
+
+        .badge {
+            display: inline-block;
+            margin-top: 1rem;
+            background: #ffe8cc;
+            padding: 5px 15px;
+            border-radius: 20px;
+        }
+
+        .table-box {
+            overflow-x: auto;
+            margin-top: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            background: white;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #777;
+            padding: 10px;
+            text-align: left;
+        }
+
+        /* Breakpoint 1: Tablets and small laptops */
+        @media (max-width: 1024px) {
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+
+        /* Breakpoint 2: Large phones */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 10px;
+                padding: 1rem;
+            }
+
+            main {
+                padding: 1.25rem;
+            }
+
+            h1 {
+                font-size: 1.9rem;
+            }
+        }
+
+        /* Breakpoint 3: Small phones */
+        @media (max-width: 480px) {
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <strong>Nitesh's Site</strong>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <h1>Responsive Project</h1>
+
+        <section class="cards">
+
+            <article class="card">
+                <h2>Home</h2>
+                <p>Welcome to my website.</p>
+            </article>
+
+            <article class="card">
+                <h2>About</h2>
+                <p>BCA AI Student at Invertis University.</p>
+            </article>
+
+            <article class="card">
+                <h2>Projects</h2>
+                <p>HTML and CSS projects.</p>
+            </article>
+
+            <article class="card">
+                <h2>Contact</h2>
+                <p>niteshkumarshakya15@gmail.com</p>
+            </article>
+
+        </section>
+
+        <span class="badge">
+            Layout: 4 Columns → 2 Columns → 1 Column
+        </span>
+
+        <h2 style="margin-top: 2rem;">
+            Responsive Test Log
+        </h2>
+
+        <div class="table-box">
+            <table>
+                <tr>
+                    <th>Device / Width</th>
+                    <th>Expected Layout</th>
+                    <th>Result</th>
+                </tr>
+
+                <tr>
+                    <td>Desktop 1440px</td>
+                    <td>4 Columns</td>
+                    <td>Pass</td>
+                </tr>
+
+                <tr>
+                    <td>iPad Air 820px</td>
+                    <td>2 Columns</td>
+                    <td>Pass</td>
+                </tr>
+
+                <tr>
+                    <td>iPhone 14 390px</td>
+                    <td>1 Column, stacked header</td>
+                    <td>Pass</td>
+                </tr>
+
+                <tr>
+                    <td>Galaxy Fold 280px</td>
+                    <td>No horizontal page scroll</td>
+                    <td>Pass</td>
+                </tr>
+            </table>
+        </div>
+
+    </main>
+
+</body>
+</html>
